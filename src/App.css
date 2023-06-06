@@ -1,0 +1,111 @@
+.App-mainhead  {
+  text-align: center;
+}
+/*CSS of navigation bar*/
+.nav-ul{
+  padding: 5px;
+  background-color: skyblue;
+  margin: 0px;
+}
+
+.nav-ul li a{
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  }
+  
+.nav-ul li{
+display: inline-block;
+padding: 10px;
+}
+
+.nav-ul button{
+  background-color: skyblue;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px; 
+}
+/*CSS of footer bar*/
+
+.foot h3{
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  background-color: skyblue;
+}
+/*CSS of Login and Signup inputboxes*/
+
+.InputDiv{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  
+}
+
+.InputDiv button{
+  margin-left: -3%;
+  background-color: skyblue;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 7px;
+}
+.InputBox{
+  display: block;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.logo {
+  display: flex;
+  background-color: skyblue;
+  width: 100%;
+  height: auto;
+}
+
+  .logo img{
+    height: 93px;
+    width: 93px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .logo h1{
+    color: white;
+    margin-top: 36px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: -webkit-xxx-large;
+    font-family: cursive;
+  }
+
+  .Link-signup{
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.App-link {
+  color: #61dafb;
+}
+
