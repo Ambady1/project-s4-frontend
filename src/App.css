@@ -4,65 +4,135 @@
 /*CSS of navigation bar*/
 .nav-ul{
   padding: 5px;
-  background-color: skyblue;
+  background-color:white;
   margin: 0px;
+  border-radius: 15px 15px 15px 15px;
+  
+}
+.logo_down{
+  border-radius: 15px 15px 15px 15px;
 }
 
+
 .nav-ul li a{
-  color: white;
+  
   padding: 5px;
   text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
   }
   
 .nav-ul li{
 display: inline-block;
 padding: 10px;
+background-color: white;
+border-radius: 5px;
+color: black;
 }
 
 .nav-ul button{
-  background-color: skyblue;
+  background-color:white;
   border: 1px solid;
   border-radius: 4px;
   padding: 5px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: black;
+}
+#logoId{
+  background-color: #e65656;
+}
+#myMessId{
+  background-color: #e65656;
 }
 /*CSS of footer bar*/
 
+*{
+  background-color: cornsilk;
+}
 .foot h3{
   position: absolute;
   bottom: 0px;
   text-align: center;
   width: 100%;
-  background-color: skyblue;
+  background-color: white;
+  
 }
+
 /*CSS of Login and Signup inputboxes*/
 
 .InputDiv{
   
+  width: 800px;
+  height: 500px;
+  background-color: #280d0d;
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 600px;
+  margin-top: 5%;
+  margin-left: 23%;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+#signupid{
+  background-color: white;
+}
+.logoPart{
+  background-color: #e65656;
+  height: 500px;
+  width: 400px;
+  border-radius: 0 15px 15px 0;
   
 }
 
+
+.loginPart{
+  background-color: white;
+  height: 500px;
+  width: 400px;
+  border-radius: 15px 0 0 15px;
+}
+#loginHead{
+  margin-left: 35%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 300%;
+  background-color: white;
+}
+
 .InputDiv button{
-  margin-left: -3%;
-  background-color: skyblue;
-  border: 1px solid;
-  border-radius: 4px;
+  margin-left: 30%;
+  background-color: #e65656;
   padding: 5px;
-  margin-top: 7px;
+  margin-top: 5%;
+  width: 150px;
+  height: 40px; 
+  color: #ffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .InputBox{
   display: block;
   width: 300px;
   padding: 5px;
-  border: 1px solid skyblue;
+  border: 1px solid #280d0d;
   border-radius: 5px;
   box-sizing: border-box;
   margin-bottom: 20px;
+  margin-left: 13%;
+  background-color: white;
+}
+#logo{
+  margin-left: 22%;
+  margin-top: 17%;
+  background-color: #e65656;
+}
+#mymess{
+  font-family: 'Inter';
+  font-size: 400%;
+  margin-left: 16%;
+  margin-top: 3%;
+  color: #ffff;
+  background-color: #e65656;
 }
 
 .App-header {
@@ -78,10 +148,18 @@ padding: 10px;
 
 .logo {
   display: flex;
-  background-color: skyblue;
-  width: 100%;
-  height: auto;
+  background-color:#e65656;
+  width: auto;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+ 
 }
+
+.totalNavbar{
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
   .logo img{
     height: 93px;
@@ -102,10 +180,14 @@ padding: 10px;
 
   .Link-signup{
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-color: white;
   }
   
 .App-link {
   color: #61dafb;
+
 }
+
 
