@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
 
 const AdminLogin = () => {
 const navigate = useNavigate()
@@ -25,13 +26,17 @@ const navigate = useNavigate()
         })
     }
     return (
-        <div>
-            <div className="InputDiv">
+        <div className='adminMain'>
+            <div className="loginPart3">
 
-                <h1>Admin Login</h1>
-                <input className="InputBox" type="text" value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder="Enter Admin ID" />
-                <input className="InputBox" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" />
-                <button type="button" onClick={handleAdminlogin}>LOGIN</button>
+                <h1 id='adminHead'>Admin Login</h1>
+                <input className="InputBox3" type="text" value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder="Enter Admin ID" /><br/>
+                <input className="InputBox3" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" /><br/>
+                <button id='adminLoginButton' type="button" onClick={handleAdminlogin}>LOGIN</button>
+            </div>
+            <div className='logoPart3'>
+            <img id = "logo" src={myImage} alt="logo" />
+            <h1 id="mymess">MyMess</h1>
             </div>
         </div>
     )

@@ -27,18 +27,18 @@ const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   }
 
   return (
-    <div>
+    <div className='totalNavbar'>
       <div className='logo'>
-        <img src={`${process.env.PUBLIC_URL}/mymess_logo.png`} alt='error' />
-        <h1>MY MESS</h1>
+        <img id = "logoId" src={`${process.env.PUBLIC_URL}/mymess_logo.png`} alt='error' />
+        <h1 id='myMessId'>MY MESS</h1>
       </div>
-      <div>
+      <div className='logo_down'>
         <ul className='nav-ul'>
           {studAuth && (
             <>
-              <li><Link to="/home">Home</Link></li>
-              <li><Link to="/qr">Scan QR</Link></li>
-              <li><Link to="/profile">Profile</Link></li>
+              <li ><Link to="/home">Home</Link></li>
+              <li ><Link to="/qr">Scan QR</Link></li>
+              <li ><Link to="/profile">Profile</Link></li>
               <button onClick={handleLogout}>Logout</button>
             </>
           )}
