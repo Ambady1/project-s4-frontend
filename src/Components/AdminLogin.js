@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
+import myImage from 'D:/Programming/Ccpp/HTML/mymess/project-s4-frontend/frontend/src/mymess_logo.png';
 
 const AdminLogin = () => {
 const navigate = useNavigate()
