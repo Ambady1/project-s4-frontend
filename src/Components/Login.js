@@ -34,7 +34,7 @@ const navigate = useNavigate()
             <input className="InputBox" type="text" value={StudentID} onChange={(e) => setStudentID(e.target.value)} placeholder="Enter Student ID" />
             <input className="InputBox" type="password" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" />
             <button type="button" onClick={CollectData}>LOGIN</button>
-            <div className="Link-signup">
+            <div className="Link-login">
                 Dont have an account? click here to &nbsp;
                 <Link id = "signupid" to={'/signup'}>
                     REGISTER

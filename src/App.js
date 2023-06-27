@@ -1,4 +1,6 @@
 import './App.css';
+import './Components/signin.css'
+import './Components/adminLogin.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Nav from './Components/Nav'

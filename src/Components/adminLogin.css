@@ -1,0 +1,48 @@
+.adminMain{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 23%;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.loginPart3{
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    border-radius: 15px 0 0 15px;
+}
+.logoPart3{
+    background-color: #e65656;
+    height: 500px;
+    width: 400px;
+    border-radius: 0 15px 15px 0;
+}
+#adminHead{
+    margin-left: 20%;
+    margin-top: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 250%;
+    background-color: white;
+    margin-bottom: 20%;
+}
+.InputBox3{
+    display: block;
+     width: 300px;
+     padding: 5px;
+     border: 1px solid #280d0d;
+     border-radius: 5px;
+     box-sizing: border-box;
+     margin-bottom: 3%;
+     margin-left: 13%;
+     background-color: white;
+       }
+#adminLoginButton{
+    margin-left: 32%;
+    width: 35%;
+    background-color: #e65656;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}       
