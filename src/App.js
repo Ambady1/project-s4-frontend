@@ -15,6 +15,7 @@ import AdminHome from './Components/AdminHome';
 import Admstudentlist from './Components/Admstudentlist';
 import Admeditmenu from './Components/Admeditmenu';
 import Main from './Components/Main';
+import Messcut from './Components/Messcut';
 function App() {
   
   const [studAuth, setAuth] = useState(false)
@@ -59,6 +60,7 @@ function App() {
           <Route path='/adminhome' element={<AdminHome admAuth={admAuth}/>}/>
           <Route path='/admstudentlist' element={<Admstudentlist admAuth={admAuth}/>}/>
           <Route path='/admeditmenu' element={<Admeditmenu/>}/>
+          <Route path='/messcut' element={<Messcut/>}/>
         </Routes>
       </BrowserRouter>
       
