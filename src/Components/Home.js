@@ -12,6 +12,11 @@ const Home = ({auth,loginStatus}) => {
   const handleFeedback=()=>{
     navigate('/feedback')
   }
+  const handleMessCut=()=>{
+    navigate('/messcut')
+  }
+  
+  
   return (
     <div>
       {auth ? (
@@ -37,7 +42,7 @@ const Home = ({auth,loginStatus}) => {
             <div className="card">
               <h2 className='cardHeadings'>Mess cut</h2>
               <p>Click here to do a mess cut</p>
-              <button>Apply Mess cut</button>
+              <button onClick={handleMessCut}>Apply Mess cut</button>
             </div>
           </div>
         </>) : null}

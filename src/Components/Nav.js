@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios';
+import 'D:/coding/dbms project/project-s4-frontend/src/App.css'
 
 const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
               <li ><Link to="/home">Home</Link></li>
               <li ><Link to="/qr">Scan QR</Link></li>
               <li ><Link to="/profile">Profile</Link></li>
-              <button onClick={handleLogout}>Logout</button>
+              <button id ="logoutButtonId" onClick={handleLogout}>Logout</button>
             </>
           )}
           {admAuth && (

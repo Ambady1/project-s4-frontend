@@ -1,9 +1,11 @@
 #editMenu{
     margin-top: 3%;
     margin-left: 0.5%;
+    margin-bottom: 0.5%;
 }
 .selectId{
     background-color: white;
+    margin-bottom: 1%;
 }
 #updateInput{
     background-color: white;
