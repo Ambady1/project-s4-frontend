@@ -42,12 +42,13 @@ const Admstudentlist = (admAuth) => {
     <div>
       {admAuth.admAuth && (<>
         <input
+        id='searchBar'
         type="text"
         placeholder="Search by Student ID"
         value={searchQuery}
         onChange={handleSearchChange}
       />
-      <button onClick={handleClick}>Search</button>
+      <button id="searchButtonList" onClick={handleClick}>Search</button>
 
       <div className='table-container'>
         <table>

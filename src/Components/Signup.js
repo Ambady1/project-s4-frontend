@@ -38,7 +38,7 @@ const Signup = () => {
 
             <button id="SignInButtonId" type="button" onClick={CollectData}>Sign Up</button>
 
-            <div className="Link-signup">
+            <div className="Link_signup">
                 Already have an account? click here to &nbsp;
                 <Link to={'/login'} id="loginLink">
                     LOGIN

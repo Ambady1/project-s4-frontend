@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+import './AdminHome.css'
 import { useNavigate } from 'react-router-dom';
 
 const AdminHome = (admAuth) => {
@@ -19,7 +20,7 @@ const AdminHome = (admAuth) => {
       <div>
         {admAuth.admAuth ? (
           <>
-            <h1>Welcome Admin</h1>
+            <h1 id='adminHeading' >Welcome Admin</h1>
 
             <div className="card-container">
               <div className="card">
