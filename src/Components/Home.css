@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   
   .card {
@@ -17,15 +18,18 @@
   .card h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    background-color: white;
   }
   
   .card p {
     font-size: 16px;
     margin-bottom: 20px;
+    background-color: white;
+    
   }
   
   .card button {
-    background-color: #4CAF50;
+    background-color:#e65656 ;
     border: none;
     border-radius: 5px;
     color: #ffffff;
@@ -38,4 +42,14 @@
   .card button:hover {
     background-color: #3e8e41;
   }
-  
+  #welcomeId{
+    margin-left: 40%;
+    background-color: cornsilk;
+    margin-top: 5%;
+  }
+  .cardHeadings{
+    background-color: ;
+  }
+.card h3{
+  background-color: white;
+}
