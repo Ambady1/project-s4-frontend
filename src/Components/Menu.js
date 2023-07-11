@@ -1,4 +1,5 @@
 import './Home.css';
+import './Menu.css'
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
@@ -35,16 +36,16 @@ const Menu = ({auth}) => {
   }
 
   return (
-    <div className="card-container">
+    <div className="containerMenu">
       {auth? (
       <>
       <div className="card">
-        <h1>Today's Menu</h1>
+        <h1 id='menuHead1'>Today's Menu</h1>
         <button onClick={handleTodaymenuClick}>Refresh</button>
         {todayMenu.length > 0 ? (
           todayMenu.map((item) => {
             return (
-              <div key={item.day}> {/* Adding key attribute to avoid warning */}
+              <div className = "foodBox" key={item.day}> {/* Adding key attribute to avoid warning */}
                 <h3>Breakfast</h3>
                 <p>{item.breakfast}</p>
                 <h3>Lunch</h3>
@@ -60,12 +61,12 @@ const Menu = ({auth}) => {
       </div>
 
       <div className="card">
-        <h1>Tomorrow's Menu</h1>
+        <h1 id='menuHead2'>Tomorrow's Menu</h1>
         <button onClick={handleTomorrowmenuClick}>Refresh</button>
         {tomorrowMenu.length > 0 ? (
           tomorrowMenu.map((item) => {
             return (
-              <div key={item.day}> {/* Adding key attribute to avoid warning */}
+              <div className = "foodBox" key={item.day}> {/* Adding key attribute to avoid warning */}
                 <h3>Breakfast</h3>
                 <p>{item.breakfast}</p>
                 <h3>Lunch</h3>

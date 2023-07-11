@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import './AdminEditMenu.css';
 const Admeditmenu = () => {
   const [menu, setMenu] = useState([])
   useEffect(() => {
@@ -39,10 +39,10 @@ const Admeditmenu = () => {
  
   return (
     <div>
-      <div>
+      <div id='editMenu'>
         <b>Edit Menu Here</b><br />
         <label>Select an option:</label>
-        <select value={selectedOption} onChange={handleOptionChange}>
+        <select className='selectId' value={selectedOption} onChange={handleOptionChange}>
           <option value="">-- Select --</option>
           <option value="Sunday">Sunday</option>
           <option value="Monday">Monday</option>
@@ -56,7 +56,7 @@ const Admeditmenu = () => {
         {selectedOption !== '' ? (
           <div>
             <label>Choose the time </label>
-            <select value={newTime} onChange={handleTimeChange}>
+            <select className="selectId" value={newTime} onChange={handleTimeChange}>
             <option value="">-- Select --</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
@@ -65,8 +65,8 @@ const Admeditmenu = () => {
             <br />
 
             <label>Enter the updated menu</label>
-            <input type='textbox' onChange={handleNewmenu} value={newMenu}></input>
-            <button onClick={handleUpdate}>Update</button>
+            <input id="updateInput" type='textbox' onChange={handleNewmenu} value={newMenu}></input>
+            <button className="selectId" onClick={handleUpdate}>Update</button>
           </div>) : null}
       </div>
       <table>

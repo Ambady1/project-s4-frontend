@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios';
 import { Link } from "react-router-dom";
-import myImage from 'D:/Programming/Ccpp/HTML/mymess/project-s4-frontend/frontend/src/mymess_logo.png';
+import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
 const Signup = () => {
     const [Name, setName] = useState('')
     const [Email, setEmail] = useState('')
@@ -38,7 +38,7 @@ const Signup = () => {
 
             <button id="SignInButtonId" type="button" onClick={CollectData}>Sign Up</button>
 
-            <div className="Link-signup">
+            <div className="Link_signup">
                 Already have an account? click here to &nbsp;
                 <Link to={'/login'} id="loginLink">
                     LOGIN

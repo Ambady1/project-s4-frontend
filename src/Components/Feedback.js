@@ -26,9 +26,9 @@ const navigate = useNavigate()
         <div className='feedbox'>
             {auth ? (
                 <>
-                    <h1>Feedback</h1>
+                    <h1 id='feedbackId'>Feedback</h1>
                     <input className="feed" type="textarea" value={Feedback} onChange={(e) => setFeedback(e.target.value)} placeholder="Enter your feedback here" />
-                    <button type="button" onClick={CollectFeedback}>SUBMIT</button>
+                    <button  type="button" onClick={CollectFeedback}>SUBMIT</button>
                 </>) : null}
         </div>
     )

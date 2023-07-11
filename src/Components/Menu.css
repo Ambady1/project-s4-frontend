@@ -1,0 +1,18 @@
+.containerMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+    
+  }
+  #menuHead1{
+    margin-left: 6%;
+  }
+  #menuHead2{
+    margin-left: 5%;
+  }
+  
+.foodBox{
+background-color: white;
+  }
+ 

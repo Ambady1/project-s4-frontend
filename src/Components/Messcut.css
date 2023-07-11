@@ -1,0 +1,54 @@
+.messcutMainDiv{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 23%;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dataPart{
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    border-radius: 15px 0 0 15px;
+}
+.logoPart2{
+    background-color: #e65656;
+        height: 500px;
+        width: 400px;
+        border-radius: 0 15px 15px 0;
+}
+
+h1{
+    font-size: 300%;
+    margin-left: 25%;
+    margin-top: 10%; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    background-color: white;
+    margin-left: 5%;
+}
+h3{
+    margin-left: 5%;
+}
+.calenderPicker{
+  margin-left: 100px;
+}
+#formIdMessCut{
+    background-color: white;
+}
+#datePickerId{
+    margin-left: 12%;
+}
+#selectedDate{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+#calenderSubmitButton{
+    margin-left: 8%;
+    margin-top: 2%;
+}

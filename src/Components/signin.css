@@ -28,6 +28,7 @@
         font-size: 300%;
         background-color: white;
         margin-bottom: 5%;
+        margin-top: 10%;
     }
     .InputBox1{
  display: block;
@@ -47,10 +48,11 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
        
     }
-    .Link-signup{
+    .Link_signup{
         margin-top: 2%;
         background-color: white;
         margin-left: 13%;
+        margin-bottom: 10%;
     }
     #loginLink{
         background-color: white;

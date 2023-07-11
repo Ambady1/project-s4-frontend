@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import './Main.css'
+import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
 const Main = () => {
     const [selectedOption,setSelectedOption] = useState('')
     const navigate = useNavigate()
@@ -17,8 +18,28 @@ const Main = () => {
         setSelectedOption(e.target.value)
     }
     return (
-        <div>
-            <div className='news-section'>
+        <div className='totalContainer'>
+        
+            
+        <div className='container'>
+            <div className='loginPart'>
+            <h1>Choose an Option</h1>
+            <div className='radio-group'>
+                <label className='labelClass'>Already a mess inmate</label>
+                <input type='radio' name='option' value='existing' checked={selectedOption === 'existing'} onChange={handleChange}></input>
+            </div>
+            <div className='radio-group'>
+                <label className='labelClass'>Not a mess inmate</label>
+                <input type='radio' name='option' value='new' checked={selectedOption === 'new'} onChange={handleChange}></input>
+            </div>
+            <button className=" buttonGreen" onClick={handleClick}>Continue</button>
+            </div>
+            <div className='logoPart'>
+            <img id = "logo" src={myImage} alt="logo" />
+            <h1 id="mymess">MyMess</h1>
+            </div>
+        </div>
+        <div className='news-section'>
             <ul className='news-section-ul'>
                 <li>News 1 bihdsub fbdunsfn inuhsjidnb dsijsinv </li>
                 <li>News 2 jinsndnvn neuwfinvn ijjnd vbn ncnbem</li>
@@ -30,18 +51,7 @@ const Main = () => {
 
             </ul>
         </div>
-        <div className='container'>
-            <h1>Choose an Option</h1>
-            <div className='radio-group'>
-                <label>Already a mess inmate</label>
-                <input type='radio' name='option' value='existing' checked={selectedOption === 'existing'} onChange={handleChange}></input>
-            </div>
-            <div className='radio-group'>
-                <label>Not a mess inmate</label>
-                <input type='radio' name='option' value='new' checked={selectedOption === 'new'} onChange={handleChange}></input>
-            </div>
-            <button onClick={handleClick}>Continue</button>
-        </div>
+    
         </div>
     )
 }

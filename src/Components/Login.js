@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
-import myImage from 'D:/Programming/Ccpp/HTML/mymess/project-s4-frontend/frontend/src/mymess_logo.png';
+import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
 const Login = () => {
     const [StudentID, setStudentID] = useState('')
     const [Password, setPassword] = useState('')
