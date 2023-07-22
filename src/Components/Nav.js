@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios';
-import 'D:/coding/dbms project/project-s4-frontend/src/App.css'
+import '../App.css'
 
 const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   const navigate = useNavigate();

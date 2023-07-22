@@ -16,6 +16,7 @@ import Admstudentlist from './Components/Admstudentlist';
 import Admeditmenu from './Components/Admeditmenu';
 import Main from './Components/Main';
 import Messcut from './Components/Messcut';
+import Livemessbill from './Components/Livemessbill';
 function App() {
   
   const [studAuth, setAuth] = useState(false)
@@ -61,6 +62,7 @@ function App() {
           <Route path='/admstudentlist' element={<Admstudentlist admAuth={admAuth}/>}/>
           <Route path='/admeditmenu' element={<Admeditmenu/>}/>
           <Route path='/messcut' element={<Messcut/>}/>
+          <Route path='/livemessbill' element={<Livemessbill loginStatus={loginData}/>}/>
         </Routes>
       </BrowserRouter>
       

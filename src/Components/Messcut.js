@@ -1,7 +1,7 @@
 import React from 'react'
 import './Messcut.css'
 import Axios from 'axios';
-import myImage from 'D:/coding/dbms project/project-s4-frontend/src/mymess_logo.png';
+import myImage from '../mymess_logo.png';
 import  { useState } from "react";
 import DatePicker from "react-multi-date-picker";
 import { add, isAfter } from 'date-fns';
@@ -40,7 +40,8 @@ import 'react-multi-date-picker/styles/colors/purple.css';
 
   const handleSubmit = async () => {
     try {
-      const response = await Axios.post('http://localhost:8800/dummy', {
+      const response = await Axios.post('http://localhost:8800/dummy', 
+      {
         dates: selectedDates.map((date) => date.toISOString()),
       });
 

@@ -15,7 +15,9 @@ const Home = ({auth,loginStatus}) => {
   const handleMessCut=()=>{
     navigate('/messcut')
   }
-  
+  const handleMessbill=()=>{
+    navigate('/livemessbill')
+  }
   
   return (
     <div>
@@ -32,7 +34,7 @@ const Home = ({auth,loginStatus}) => {
             <div className="card">
               <h2 className='cardHeadings'>Live Mess bill</h2>
               <p>Click here to see your mess bill upto now</p>
-              <button>See Mess Bill</button>
+              <button onClick={handleMessbill} >See Mess Bill</button>
             </div>
             <div className="card">
               <h2 className='cardHeadings'>Give Feedback</h2>
