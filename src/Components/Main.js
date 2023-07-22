@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import './Main.css'
 import myImage from '../mymess_logo.png';
+import axios from 'axios';
 const Main = () => {
     const [selectedOption, setSelectedOption] = useState('')
+    const [newsItems, setNewsItems] = useState([]);
+
     const navigate = useNavigate()
     const handleClick = () => {
         if (selectedOption === 'new') {
@@ -17,6 +20,18 @@ const Main = () => {
     const handleChange = (e) => {
         setSelectedOption(e.target.value)
     }
+
+    //Useeffect for news 
+    useEffect(() => {
+        axios.get("http://localhost:8800/news")
+            .then(response => {
+                setNewsItems(response.data);
+            })
+            .catch(error => {
+                console.log("Error occurred while fetching news(frontend):", error);
+            });
+
+    }, [])
     return (
         <div className='totalContainer'>
 
@@ -41,16 +56,9 @@ const Main = () => {
             </div>
             <div className='news-section'>
                 <ul className='news-section-ul'>
-                    <li>New Hostel Mess 'Food Delight' Opens with Exciting Menu Options!</li>
-                    <li>Special Festive Menu Announcement: Enjoy a Grand Diwali Feast at the Mess!</li>
-                    <li>Upgraded Dining Facilities Coming Soon to Enhance Your Mess Experience!</li>
-                    <li>Attention Vegetarians: Exciting New Vegetarian Food Stations Added to the Mess!</li>
-                    <li>Delicious Continental Cuisine Added to the Mess Menu for International Students!</li>
-                    <li>Mess Feedback Week: Share Your Thoughts and Win Exciting Prizes!</li>
-                    <li>Healthy Eating Campaign: Discover Nutritious Meal Options at the Mess!</li>
-                    <li>New 'Chef's Special' Menu Launch: Indulge in Signature Dishes Every Weekend!</li>
-                    <li>Exciting Theme Nights: Enjoy Mexican Fiesta, Italian Extravaganza, and More!</li>
-                    <li>Get Ready for a Spicy Twist: Introducing 'Street Food Junction' in the Mess!</li>
+                    {newsItems.map((item, index) => (
+                        <li key={index}>{item.content}</li>
+                    ))}
 
                 </ul>
             </div>
