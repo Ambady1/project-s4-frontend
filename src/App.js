@@ -61,7 +61,7 @@ function App() {
           <Route path='/adminhome' element={<AdminHome admAuth={admAuth}/>}/>
           <Route path='/admstudentlist' element={<Admstudentlist admAuth={admAuth}/>}/>
           <Route path='/admeditmenu' element={<Admeditmenu/>}/>
-          <Route path='/messcut' element={<Messcut/>}/>
+          <Route path='/messcut' element={<Messcut loginStatus={loginData}/>}/>
           <Route path='/livemessbill' element={<Livemessbill loginStatus={loginData}/>}/>
         </Routes>
       </BrowserRouter>
