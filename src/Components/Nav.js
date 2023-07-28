@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios';
-import '../App.css'
 
-const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
+import './Nav.css'
+
+
+const Navbarx = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
     Axios.get('http://localhost:8800/logout', { withCredentials: true })
@@ -27,10 +29,11 @@ const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
       });
   }
 
+
   return (
     <div className='totalNavbar'>
       <div className='logo'>
-        <img id = "logoId" src={`${process.env.PUBLIC_URL}/mymess_logo.png`} alt='error' />
+       
         <h1 id='myMessId'>MY MESS</h1>
       </div>
       <div className='logo_down'>
@@ -60,4 +63,6 @@ const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   );
 }
 
-export default Nav;
+
+
+export default Navbarx;
