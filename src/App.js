@@ -17,6 +17,11 @@ import Admeditmenu from './Components/Admeditmenu';
 import Main from './Components/Main';
 import Messcut from './Components/Messcut';
 import Livemessbill from './Components/Livemessbill';
+import FeeDefaulters from './Components/FeeDefaulters';
+import NoticeUpdate from './Components/NoticeUpdate';
+import Profile from './Components/Profile';
+import Page1 from './Components/Page1';
+
 function App() {
   
   const [studAuth, setAuth] = useState(false)
@@ -52,7 +57,8 @@ function App() {
           <Route path='/' element={<Main/>} />
           <Route path='/home' element={<Home auth={studAuth} loginStatus={loginData}/>} />
           <Route path='/qr' element={<h1>Scan QR</h1>} />
-          <Route path='/profile' element={<h1>Profile component</h1>} />
+          <Route path='/profile' element={<Profile loginStatus={loginData}/>} />
+          <Route path='/page1' element ={<Page1/>}/>
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/menu' element={<Menu auth={studAuth}/>}/>
@@ -61,6 +67,8 @@ function App() {
           <Route path='/adminhome' element={<AdminHome admAuth={admAuth}/>}/>
           <Route path='/admstudentlist' element={<Admstudentlist admAuth={admAuth}/>}/>
           <Route path='/admeditmenu' element={<Admeditmenu/>}/>
+          <Route path='/admfeedefaulters' element={<FeeDefaulters/>}/>
+          <Route path='/admupdatenotice' element={<NoticeUpdate/>}/>
           <Route path='/messcut' element={<Messcut loginStatus={loginData}/>}/>
           <Route path='/livemessbill' element={<Livemessbill loginStatus={loginData}/>}/>
         </Routes>

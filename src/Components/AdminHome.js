@@ -15,6 +15,16 @@ const AdminHome = (admAuth) => {
     e.preventDefault()
     navigate('/admeditmenu')
   } 
+
+  const handleDefaulters=(e)=>{
+    e.preventDefault()
+    navigate('/admfeedefaulters')
+  }
+
+  const handleUpdateNotice=(e)=>{
+    e.preventDefault()
+    navigate('/admupdatenotice')
+  }
   return (
     <div>
       <div>
@@ -31,7 +41,7 @@ const AdminHome = (admAuth) => {
               <div className="card">
                 <h2>See fee defaulters</h2>
                 <p>Click here to see the list of fee defaulters</p>
-                <button>See fee defaulters</button>
+                <button onClick={handleDefaulters}>See fee defaulters</button>
               </div>
               <div className="card">
                 <h2>Edit menu</h2>
@@ -41,7 +51,7 @@ const AdminHome = (admAuth) => {
               <div className="card">
                 <h2>Update notice</h2>
                 <p>Click here to update notice</p>
-                <button>Update notice</button>
+                <button onClick={handleUpdateNotice}>Update notice</button>
               </div>
             </div>
           </>) : null}

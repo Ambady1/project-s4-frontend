@@ -11,7 +11,7 @@ const Main = () => {
     const navigate = useNavigate()
     const handleClick = () => {
         if (selectedOption === 'new') {
-            navigate('/signup')
+            navigate('/page1')
         }
         else if (selectedOption === 'existing') {
             navigate('/login')

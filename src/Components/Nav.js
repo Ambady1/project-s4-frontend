@@ -49,7 +49,7 @@ const Nav = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
           </>)}
           {!studAuth && !admAuth && (
             <>
-              <li><Link to="/signup">Sign Up</Link></li>
+              <li><Link to="/page1">Sign Up</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to ="/adminlogin">Admin</Link></li>
             </>
