@@ -38,7 +38,7 @@ const Admeditmenu = () => {
   }
  
   return (
-    <div>
+    <div widthdiv>
       <div id='editMenu'>
         <b>Edit Menu Here</b><br />
         <label>Select an option:</label>
@@ -69,7 +69,7 @@ const Admeditmenu = () => {
             <button className="selectId" onClick={handleUpdate}>Update</button>
           </div>) : null}
       </div>
-      <table>
+      <table className='tableid'>
         <thead>
           <tr>
             <th>DAY</th>

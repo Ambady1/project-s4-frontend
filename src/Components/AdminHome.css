@@ -1,5 +1,31 @@
 #adminHeading{
     margin-top: 5%;
     margin-left: 38%;
+    
+}
+
+.card button {
+    background-color:#e65656 ;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .card button:hover {
+    background-color: #3e8e41;
+  }
+  #welcomeId{
+    margin-left: 37%;
     background-color: white;
+    margin-top: 5%;
+  }
+  .cardHeadings{
+    background-color: ;
+  }
+.card h3{
+  background-color: white;
 }

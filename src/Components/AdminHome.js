@@ -1,5 +1,4 @@
 import React from 'react'
-import './Home.css';
 import './AdminHome.css'
 import { useNavigate } from 'react-router-dom';
 
