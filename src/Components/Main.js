@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Main.css'
-import axios from 'axios';
 import logo from '../assets/logo.png'
 
 const Main = () => {
     const [selectedOption, setSelectedOption] = useState('')
-    const [newsItems, setNewsItems] = useState([]);
 
     const navigate = useNavigate()
     const handleClick = () => {
@@ -21,17 +19,7 @@ const Main = () => {
         setSelectedOption(e.target.value)
     }
 
-    //Useeffect for news 
-    useEffect(() => {
-        axios.get("http://localhost:8800/news")
-            .then(response => {
-                setNewsItems(response.data);
-            })
-            .catch(error => {
-                console.log("Error occurred while fetching news(frontend):", error);
-            });
-
-    }, [])
+   
     return (
         <div className='totalContainer'>
         <div className='container'>
