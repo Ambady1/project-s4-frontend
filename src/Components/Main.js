@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import './Main.css'
-import myImage from '../mymess_logo.png';
 import axios from 'axios';
+import logo from '../assets/logo.png'
+
 const Main = () => {
     const [selectedOption, setSelectedOption] = useState('')
     const [newsItems, setNewsItems] = useState([]);
@@ -11,7 +11,7 @@ const Main = () => {
     const navigate = useNavigate()
     const handleClick = () => {
         if (selectedOption === 'new') {
-            navigate('/signup')
+            navigate('/page1')
         }
         else if (selectedOption === 'existing') {
             navigate('/login')
@@ -33,37 +33,59 @@ const Main = () => {
 
     }, [])
     return (
-        <div className='totalContainer'>
-
-
+       <div className='totalContainer'>
             <div className='container'>
-                <div className='loginPart'>
-                    <h1>Choose an Option</h1>
-                    <div className='radio-group'>
-                        <label className='labelClass'>Already a mess inmate</label>
-                        <input type='radio' name='option' value='existing' checked={selectedOption === 'existing'} onChange={handleChange}></input>
+                <div className='signinPart'>
+                    <div className="signinText">
+                        Sign up for the hostel mess of your choice
                     </div>
-                    <div className='radio-group'>
-                        <label className='labelClass'>Not a mess inmate</label>
-                        <input type='radio' name='option' value='new' checked={selectedOption === 'new'} onChange={handleChange}></input>
+                    <div className="loginForm">
+                        <div className="radioTile">
+                            <label for="already">
+                                <div className="labelText">already a mess inmate?</div>
+                                <div className="radioButtonDiv">
+                                    <input type="radio" id="already"  name='option' value='existing' checked={selectedOption === 'existing'} onChange={handleChange}/>
+                                    <span className="radioButton"></span>
+                                    <span className="radioButton2"></span>
+                                </div>    
+                            </label>     
+                        </div>
+                        <br/>
+                        <div className="radioTile">
+                            <label for="notyet">
+                                <div className="labelText">not yet a mess inmate?</div>
+                                <div className="radioButtonDiv">
+                                    <input type="radio" id="notyet" name='option' value='new' checked={selectedOption === 'new'} onChange={handleChange}/>
+                                    <span className="radioButton"></span>
+                                    <span className="radioButton2"></span>
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <button className=" buttonGreen" onClick={handleClick}>Continue</button>
+                    <div className="submitDiv">
+                        <button className="submitButton" onClick={handleClick}>Continue</button>
+                    </div>
+                
                 </div>
                 <div className='logoPart'>
-                    <img id="logo" src={myImage} alt="logo" />
-                    <h1 id="mymess">MyMess</h1>
+                    <div className='MyMessImgDiv'>
+                        <img className="MyMessImg" src={logo} alt="logo" />
+                    </div>
+                    
+                    <div className='MyMessTextDiv'>
+                        <div className="MyMessText">
+                            MyMess
+                        </div>
+                        <div className="MyMessTagline">
+                            the #1 destination for
+                            all your mess needs
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className='news-section'>
-                <ul className='news-section-ul'>
-                    {newsItems.map((item, index) => (
-                        <li key={index}>{item.content}</li>
-                    ))}
-
-                </ul>
-            </div>
-
         </div>
+      
+
     )
 }
 

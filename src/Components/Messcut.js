@@ -33,7 +33,10 @@ const Messcut = ({ loginStatus }) => {
         end:formattedLastDate,
         nod:daysInBetween
       }).then((response)=>{
-        console.log(response)
+        if(response)
+        {
+          alert("Messcut Successfull!");
+        }
       })
 
       // Clear the selected dates after successful submission

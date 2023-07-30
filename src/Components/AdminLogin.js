@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import myImage from '../mymess_logo.png';
+import logo from '../assets/logo.png'
 
 const AdminLogin = () => {
 const navigate = useNavigate()
@@ -35,8 +35,19 @@ const navigate = useNavigate()
                 <button id='adminLoginButton' type="button" onClick={handleAdminlogin}>LOGIN</button>
             </div>
             <div className='logoPart3'>
-            <img id = "logo" src={myImage} alt="logo" />
-            <h1 id="mymess">MyMess</h1>
+            <div className='MyMessImgDiv'>
+                    <img className="MyMessImg" src={logo} alt="logo" />
+                </div>
+                    
+                <div className='MyMessTextDiv'>
+                    <div className="MyMessText">
+                         MyMess
+                    </div>
+                    <div className="MyMessTagline">
+                        the #1 destination for
+                        all your mess needs
+                    </div>
+                </div>
             </div>
         </div>
     )
