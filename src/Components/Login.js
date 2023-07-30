@@ -33,23 +33,24 @@ const navigate = useNavigate()
     return (
         <div className="container">
 
-            <div className="signinPart">
+            <div className="loginPart">
                 <div className="loginText">
                     Log in to your MyMess account:
                 </div>
                 <div className="loginForm">
-                    <input className="textField" type="text" value={StudentID} onChange={(e) => setStudentID(e.target.value)} placeholder="Enter Student ID" />
+                    <input className="textField" type="text" value={StudentID} onChange={(e) => setStudentID(e.target.value)} placeholder="Enter Student ID"/>
                     <br/>
-                    <input className="textField" type="password" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" />
+                    <br/>
+                    <input id="password" className="textField" type="password" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password"/>                     
                 </div>
                     
-                <div className='submitDiv'>
-                    <button className="loginsubmitButton" type="button" onClick={CollectData}>Login</button>
+                <div className='loginSubmitDiv'>
+                    <button className="loginSubmitButton" type="button" onClick={CollectData}>Login</button>
                 </div>
 
                 <div className="register">
                     Don't have an account? Register&nbsp;
-                    <Link id = "signupid" to={'/page1'}>
+                    <Link id = "signupid" to={'/signup'}>
                         HERE
                     </Link>
                 </div>
@@ -58,7 +59,7 @@ const navigate = useNavigate()
 
             <div className='logoPart'>
                 <div className='MyMessImgDiv'>
-                    <img className="MyMessImg" src={logo} alt="logo" />
+                    <img draggable='false' className="MyMessImg" src={logo} alt="logo" />
                 </div>
                     
                 <div className='MyMessTextDiv'>

@@ -7,11 +7,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: url(../assets/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 .totalContainer{
   height: 100vh;
@@ -19,6 +19,14 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+  background: url(../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -66,7 +74,7 @@ html, body {
   /* padding: 30px 20px 0px 20px; */
 }
 
-label {
+.radioTile > label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,21 +145,21 @@ input[type="radio"] {
   box-shadow:  inset 0 0 0 2.5px rgba(255, 255, 255, 0.4);
 }
 .radioTile:hover .radioButton2 {
-  box-shadow:  inset 0 0 0 7px rgba(255, 255, 255, 0.4);
+  box-shadow:  inset 0 0 0 8vw rgba(255, 255, 255, 0.4);
 }
 input[type="radio"]:checked + .radioButton {
   box-shadow:  inset 0 0 0 2.5px rgba(255, 0, 0, 0.785);
 }
 input[type="radio"]:checked + .radioButton + .radioButton2 {
-  box-shadow:  inset 0 0 0 7px rgba(255, 0, 0, 0.785);
+  box-shadow:  inset 0 0 0 8vw rgba(255, 0, 0, 0.785);
 }
 .radioTile:hover > label > .labelText + .radioButtonDiv > input[type="radio"]:checked + .radioButton {
   box-shadow:  inset 0 0 0 2.5px rgb(255, 255, 255);
 }
 .radioTile:hover > label > .labelText + .radioButtonDiv > input[type="radio"]:checked + .radioButton + .radioButton2 {
-  box-shadow:  inset 0 0 0 7px rgb(255, 255, 255);
+  box-shadow:  inset 0 0 0 8vw rgb(255, 255, 255);
 }
-.submitDiv {
+.signinSubmitDiv {
   width: 95px;
   height: 38px;
   text-align: center;
@@ -304,9 +312,9 @@ input[type="radio"]:checked + .radioButton + .radioButton2 {
       padding: 0px 4px 0px 4px;
   }
   .MyMessTagline {
-      font-size: 2.54vw;
+      font-size: 2.5vw;
       width: 100%;
-      padding: 0px 2vw 0px 0px;
+      padding: 0px 1.95vw 0px 0px;
       margin: 0px;
   }
   .signinText {
@@ -319,7 +327,7 @@ input[type="radio"]:checked + .radioButton + .radioButton2 {
       line-height: normal;
       margin: auto;
   }
-  .submitDiv {
+  .signinSubmitDiv {
       width: 25vw;
       height: 6vh;
       text-align: center;
