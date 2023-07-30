@@ -11,12 +11,18 @@ const Signup = () => {
     const [Password, setPassword] = useState('')
     const [Date, setDate] = useState('')
     const [Phone, setPhone] = useState('')
+
     // Access the passed props using useLocation
     const location = useLocation();
     const { Messname, Semester, Dept, Preference } = location.state || {}; // Use optional chaining
 
-    console.log(Messname, Semester, Dept, Preference)
+    // Function to trigger the page reload after registration is completed successfully
+    const handleReload = () => {
+        alert("Registration completed successfully!");
+        window.location.reload();
+    };
 
+    // Function to collect data and trigger the registration process
     const CollectData = () => {
         Axios.post('http://localhost:8800/add', {
             name: Name,
@@ -29,11 +35,13 @@ const Signup = () => {
             sem: Semester,
             dept: Dept,
             pref: Preference
-        }).then(() => {
-            alert("Registration completed successfully!")
-            window.location.reload();
-        })
-    }
+        }).then(handleReload)
+        .catch((error) => {
+            // Handle error if the registration fails
+            console.error("Registration failed:", error);
+            alert("Registration failed. Please try again later.");
+        });
+    };
 
     return (
         <div className="signMainDiv">
@@ -54,7 +62,6 @@ const Signup = () => {
                         LOGIN
                     </Link>
                 </div>
-
             </div>
             <div className="SignInDiv2">
                 <img id="logo" src={myImage} alt="logo" />
@@ -63,4 +70,5 @@ const Signup = () => {
         </div>
     )
 }
+
 export default Signup;
