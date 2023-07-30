@@ -49,7 +49,7 @@ const navigate = useNavigate()
 
                 <div className="register">
                     Don't have an account? Register&nbsp;
-                    <Link id = "signupid" to={'/signup'}>
+                    <Link id = "signupid" to={'/page1'}>
                         HERE
                     </Link>
                 </div>
