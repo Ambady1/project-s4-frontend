@@ -69,6 +69,7 @@ const Admeditmenu = () => {
             <button className="selectId" onClick={handleUpdate}>Update</button>
           </div>) : null}
       </div>
+      <div id='tableContainerMenu'>
       <table>
         <thead>
           <tr>
@@ -89,6 +90,7 @@ const Admeditmenu = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   )
 }

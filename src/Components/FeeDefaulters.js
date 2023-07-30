@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './FeeDefaulters.css'
 const FeeDefaulters = () => {
   const [defaultersData, setDefaultersData] = useState([]);
 
@@ -27,7 +27,8 @@ const FeeDefaulters = () => {
 
   return (
     <div>
-      <h1>Fee Defaulters</h1>
+      <h1 id='defaulterHeading'>Fee Defaulters</h1>
+    <div className='tableDefaulters'>    
       <table>
         <thead>
           <tr>
@@ -51,6 +52,7 @@ const FeeDefaulters = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

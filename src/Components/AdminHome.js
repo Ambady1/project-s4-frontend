@@ -34,13 +34,13 @@ const AdminHome = (admAuth) => {
 
             <div className="card-container">
               <div className="card">
-                <h2>See student list</h2>
-                <p>Click here to see the list of students </p>
+                <h2 >See student list</h2>
+                <p id='clickStudents'>Click here to see the list of students </p>
                 <button onClick={handleStudentlist}>Student list</button>
               </div>
               <div className="card">
-                <h2>See fee defaulters</h2>
-                <p>Click here to see the list of fee defaulters</p>
+                <h2 id='seeFeeDefaulters'>See fee defaulters</h2>
+                <p id='clickDefaulters'>Click here to see the list of fee defaulters</p>
                 <button onClick={handleDefaulters}>See fee defaulters</button>
               </div>
               <div className="card">

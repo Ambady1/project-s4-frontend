@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import './NoticeUpdate.css'
 const NoticeUpdate = () => {
   const [text, setText] = useState('');
 
@@ -22,7 +22,8 @@ const NoticeUpdate = () => {
   };
 
   return (
-    <div>
+<div className='container1'>
+      <h1 className='heading1'>UPDATE NOTIFICATION</h1>
       <textarea
         value={text}
         onChange={handleChange}
@@ -31,7 +32,7 @@ const NoticeUpdate = () => {
         cols="50"
       ></textarea>
       <br />
-      <button onClick={handleSubmit}>Update Notice</button>
+      <button onClick={handleSubmit} id='updateButton'>Update Notice</button>
     </div>
   );
 };
