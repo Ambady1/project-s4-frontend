@@ -1,7 +1,10 @@
 import React, {  useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
-import myImage from '../mymess_logo.png';
+import logo from '../assets/logo.png'
+import './Main.css'
+import './Login.css'
+
 const Login = () => {
     const [StudentID, setStudentID] = useState('')
     const [Password, setPassword] = useState('')
@@ -28,24 +31,47 @@ const navigate = useNavigate()
     }
     
     return (
-        <div className="InputDiv">
-            <div className="loginPart">
-            <h1 id="loginHead">Login</h1>
-            <input className="InputBox" type="text" value={StudentID} onChange={(e) => setStudentID(e.target.value)} placeholder="Enter Student ID" />
-            <input className="InputBox" type="password" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" />
-            <button type="button" onClick={CollectData}>LOGIN</button>
-            <div className="Link-login">
-                Dont have an account? click here to &nbsp;
-                <Link id = "signupid" to={'/signup'}>
-                    REGISTER
-                </Link>
+        <div className="container">
+
+            <div className="signinPart">
+                <div className="loginText">
+                    Log in to your MyMess account:
+                </div>
+                <div className="loginForm">
+                    <input className="textField" type="text" value={StudentID} onChange={(e) => setStudentID(e.target.value)} placeholder="Enter Student ID" />
+                    <br/>
+                    <input className="textField" type="password" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" />
+                </div>
+                    
+                <div className='submitDiv'>
+                    <button className="loginsubmitButton" type="button" onClick={CollectData}>Login</button>
+                </div>
+
+                <div className="register">
+                    Don't have an account? Register&nbsp;
+                    <Link id = "signupid" to={'/signup'}>
+                        HERE
+                    </Link>
+                </div>
+
             </div>
+
+            <div className='logoPart'>
+                <div className='MyMessImgDiv'>
+                    <img className="MyMessImg" src={logo} alt="logo" />
+                </div>
+                    
+                <div className='MyMessTextDiv'>
+                    <div className="MyMessText">
+                         MyMess
+                    </div>
+                    <div className="MyMessTagline">
+                        the #1 destination for
+                        all your mess needs
+                    </div>
+                </div>
             </div>
-            <div className="logoPart">
-            <img id = "logo" src={myImage} alt="logo" />
-            <h1 id="mymess">MyMess</h1>
-                
-            </div>
+
         </div>
     )
 }
