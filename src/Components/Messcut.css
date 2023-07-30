@@ -22,17 +22,14 @@
         border-radius: 0 15px 15px 0;
 }
 
-h1{
+.messcuth1{
     font-size: 300%;
     margin-left: 25%;
     margin-top: 10%; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h2{
+.messcuth2{
     background-color: white;
-    margin-left: 5%;
-}
-h3{
     margin-left: 5%;
 }
 .calenderPicker{

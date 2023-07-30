@@ -1,7 +1,7 @@
 //Page to get values messname,Dept,sem,pref
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import myImage from '../mymess_logo.png';
+import myImage from '../assets/logo.png';
 import './Page1.css'
 import { Link } from "react-router-dom";
 const Page1 = () => {
