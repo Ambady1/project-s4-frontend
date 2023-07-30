@@ -69,7 +69,8 @@ const Admeditmenu = () => {
             <button className="selectId" onClick={handleUpdate}>Update</button>
           </div>) : null}
       </div>
-      <table className='tableid'>
+      <div className='tableAdjust'>
+      <table >
         <thead>
           <tr>
             <th>DAY</th>
@@ -89,6 +90,7 @@ const Admeditmenu = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   )
 }
