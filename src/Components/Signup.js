@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios';
 import { Link } from "react-router-dom";
-import myImage from '../mymess_logo.png';
+import myImage from '../assets/logo.png';
 import { useLocation } from 'react-router-dom';
 
 const Signup = () => {

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
-
+import myMess from '../assets/logoRed.png';
+import notifications from '../assets/notifications.png';
+import settings from '../assets/settings.png';
+import options from '../assets/options.png';
 import './Nav.css';
 
 const Navbarx = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
@@ -35,20 +38,54 @@ const Navbarx = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
   const shouldRenderNav = !['/', '/signup', '/login', '/page1'].includes(pathname);
 
   return (
-    <div className='totalNavbar'>
+    <div className='totalNavBar'>
       {shouldRenderNav && (
-        <div className='logo'>
-          <h1 id='myMessId'>MY MESS</h1>
+        <div className='navMyMessLogo'>
+          <div className="navMyMessImgDiv">
+              <img className="navMyMessImg" src={myMess} alt="MyMess"/>
+          </div>
+          <div className="navMyMessTextDiv">
+              <div className="navMyMessText">
+                  MyMess
+              </div>
+              <div className="navMyMessTagline">
+                  the #1 destination for
+                  all your mess needs
+              </div>
+          </div>
         </div>
       )}
-      <div className='logo_down'>
-        <ul className='nav-ul'>
+      <div className='userBar'>
+        
           {studAuth && (
             <>
-              <li><Link to="/home">Home</Link></li>
-              <li><Link to="/qr">Scan QR</Link></li>
-              <li><Link to="/profile">Profile</Link></li>
-              <button id="logoutButtonId" onClick={handleLogout}>Logout</button>
+              <div className='theActualUserBar'>
+                {/* <Link to="/home">Home</Link> */}
+                {/* <Link to="/qr">Scan QR</Link> */}
+                <Link to="/profile" className='userLabel'>Mess No. 169</Link>
+                {/* <button id ="logoutButtonId" onClick={handleLogout}>Logout</button> */}
+
+                
+                <img src={notifications} alt="Notifications" className="notifications"/>
+                <img src={settings} alt="Settings" className="settings"/>
+                
+                <div className="optionsContainer">
+                  <input type="checkbox" id="toggleSelect"/>
+                  <label for="toggleSelect">
+                      <img src={options} alt="Options" className="options"/>
+                  </label>
+                  <ul className="optionList" type="none">
+                      <div className="listDiv">
+                          <li><Link to="/home" className='homeLink'>Home</Link></li>
+                          <li>Help</li>
+                          <li onClick={handleLogout}>Log Out</li>
+                          <li>About Us</li>
+                      </div>                    
+                  </ul>
+                </div>
+
+              </div>
+              {/* <button id="logoutButtonId" onClick={handleLogout}>Logout</button> */}
             </>
           )}
           {admAuth && (
@@ -63,7 +100,6 @@ const Navbarx = ({ studAuth, setAuth, admAuth, setAdmAuth }) => {
               <li><Link to="/adminlogin">Admin</Link></li>
             </>
           )}
-        </ul>
       </div>
     </div>
   );
