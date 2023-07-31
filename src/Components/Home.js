@@ -14,7 +14,7 @@ import { useState,useEffect } from 'react';
 const Home = ({auth,loginStatus}) => {
 
   const [newsItems, setNewsItems] = useState([]);
-
+console.log(newsItems);
   const navigate = useNavigate();
   const handleProfile=()=> {
     navigate('/profile')
@@ -61,7 +61,7 @@ console.log(newsItems)
                 {newsItems.map((item) => (
                   <React.Fragment key={item.id}>
                     <span className="notifBreaker"></span>
-                    <div className="notifText">{item.message}</div>
+                    <div className="notifText">{item.content}</div>
                   </React.Fragment>
                 ))}
               </div>
