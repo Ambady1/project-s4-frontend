@@ -1,3 +1,5 @@
+NOTE : THIS REPOSITORY IS MADE IN THE DEVELOPMENT STAGE OF MYMESS. THE FINISHED PROJECT IS AVAILABLE IN : https://github.com/Ambady1/MyMess-RDBMS-Mini-Project
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
